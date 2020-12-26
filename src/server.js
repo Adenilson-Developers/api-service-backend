@@ -21,9 +21,9 @@ app.post('/create', async ( request, response) =>{
 
     try{
         await doc.useServiceAccountAuth({
-            client_email: '',
-            private_key:  '',
-        });       
+           client_email: ,
+           private_key:,
+    });    
 
         await doc.loadInfo();
         const sheet = doc.sheetsById[0];
