@@ -21,8 +21,8 @@ app.post('/create', async ( request, response) =>{
 
     try{
         await doc.useServiceAccountAuth({
-            client_email: '',
-            private_key:  '',
+            client_email: process.env.APP_CLIENTE_KEY,
+            private_key:  process.env.APP_PRIVATE_KEY,
         });       
 
         await doc.loadInfo();
